@@ -1,8 +1,8 @@
 <template>
   <v-app dark>
     <v-app-bar fixed app>
-      <div class="logo">
-        <svg width="100%" viewBox="0 0 489.844 91.309" xmlns="http://www.w3.org/2000/svg">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 489.844 91.309" xmlns="http://www.w3.org/2000/svg">
           <g
             id="svgGroup"
             stroke-linecap="round"
@@ -19,7 +19,7 @@
             />
           </g>
         </svg>
-      </div>
+      </a>
       <span class="ml-3 font-weight-light">Разрабатываем мобильные и веб приложения</span>
       <v-spacer />
       <div class="d-none d-md-block">
