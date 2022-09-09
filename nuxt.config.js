@@ -8,20 +8,27 @@ export default {
   // },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - SM Digital',
-    title: 'SM Digital',
+    titleTemplate: '%s - SM Agency',
+    title: 'Главная',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
+      {
+        name: 'viewport',
+        content:
+          'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui',
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Разработка веб-приложений на Vue.js и FastAPI, создание мобильных приложений с использованием React Native, развертывание приложением с помощью Docker и Kubernetes',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    // link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
-
+  css: ['@mdi/font/css/materialdesignicons.css'],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 
   plugins: [
@@ -29,19 +36,16 @@ export default {
       src: '~/plugins/vue-video-background',
       ssr: false,
     },
+    {
+      src: '~/plugins/vuelidate.js',
+      mode: 'both',
+    },
   ],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/stylelint
-    // '@nuxtjs/stylelint-module',
-    // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
-  ],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/vuetify'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -52,7 +56,7 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en',
+      lang: 'ru',
     },
   },
 
@@ -64,23 +68,25 @@ export default {
         family: 'Open Sans',
       },
     },
-    customVariables: ['~/assets/variables.sass'],
+    icons: {
+      iconfont: 'mdi', // default - only for display purposes
+    },
     theme: {
       dark: true,
       themes: {
+        // https://theme-generator.vuetifyjs.com/
         dark: {
-          primary: '#A2248F',
-          accent: '#FF5C00',
-          secondary: '#3b3b3b',
-          default: '#d8d8d8',
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: '#009D6B',
-          background: '#fff',
+          primary: '#2196f3',
+          secondary: '#ff9800',
+          accent: '#cddc39',
+          error: '#f44336',
+          warning: '#9c27b0',
+          info: '#03a9f4',
+          success: '#4caf50',
         },
       },
     },
+    customVariables: ['~/assets/variables.sass'],
   },
 
   eslint: {
