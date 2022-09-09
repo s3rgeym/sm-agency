@@ -1,6 +1,8 @@
 <template>
   <v-app-bar fixed>
-    <v-toolbar-title>SM Agency</v-toolbar-title>
+    <v-toolbar-title>
+      <v-btn plain to="/" nuxt>SM Agency</v-btn>
+    </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
       <v-btn v-for="(link, index) in links" :key="index" text :to="link.to">
