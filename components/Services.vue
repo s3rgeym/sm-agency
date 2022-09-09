@@ -32,7 +32,7 @@ export default {
       },
       {
         title: 'Услуги DevOps',
-        text: `<p>Разворачивание серверных приложений с помощью Docker и Kubernetes.</p>`,
+        text: `<p>Развертывание серверных приложений с помощью Docker и Kubernetes.</p>`,
       },
     ],
   }),

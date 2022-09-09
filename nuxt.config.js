@@ -21,7 +21,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Разработка веб-приложений на Vue.js и FastAPI, создание мобильных приложений с использованием React Native, развертывание приложением с помощью Docker и Kubernetes',
+          'Разработка веб-приложений на Vue.js и FastAPI, создание мобильных приложений с использованием React Native, развертывание серверный приложенией с помощью Docker и Kubernetes',
       },
     ],
     // link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
